@@ -121,8 +121,9 @@ CNNの学習済みモデルを下記の環境で構築しています。
 
 ## 参考
 
-mamecog（まめコグ）とKerasの出力が同等であることを確認するためのツールとして、
+mamecog（まめコグ）とKerasの中間層の出力が同等であることを確認するためのツールとして、
 mamecog_equality_check（[https://github.com/84moto/mamecog_equality_check](https://github.com/84moto/mamecog_equality_check)）を用意しました。
+MNIST文字認識CNNでmamecogとKerasの中間層出力が同じになることを確認済みです。
 
 ## 開発状況と今後の予定
 
