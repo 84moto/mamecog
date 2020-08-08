@@ -6,7 +6,9 @@
 
 まめコグ（mamecog）は、Kerasで構築したCNN（Convolutional Neural Network）の学習済みモデルを用いて、C#アプリケーションでCNNの推論を行うツールです。まめコグにはCNNの学習機能は含みません。
 
-まめコグの最大の特徴は、小さな4個のC#クラス（LayerData2D, Conv2D, MaxPool2D, Dense）だけでCNNライブラリが構成されていることです。まめコグでは、Kerasの学習済みモデルをC#で読み込み可能な独自形式に変換し、これを用いてC#アプリケーションでCNNの推論を実行します。他のC#ライブラリへの依存もなく、様々なC#アプリケーションでCNNを利用可能とすることを目指しています。
+まめコグの最大の特徴は、小さな4個のC#クラス（LayerData2D, Conv2D, MaxPool2D, Dense）だけでCNNライブラリが構成されていることです。
+
+まめコグでは、Kerasの学習済みモデルをC#で読み込み可能な独自形式に変換し、これを用いてC#アプリケーションでCNNの推論を実行します。CNNモデルの学習はKerasとPythonで行いますが、学習完了後にC#アプリケーションでCNNによる認識・判別を実行するときにはKerasもPythonも不要です。他のC#ライブラリへの依存もなく、様々なC#アプリケーションでCNNを利用可能とすることを目指しています。
 
 ## 使用方法
 
@@ -116,6 +118,11 @@ dense.Calc(denseOutput, pool2flatten);
 CNNの学習済みモデルを下記の環境で構築しています。
 - Python 3.7.8
 - TensorFlow 2.2.0
+
+## 参考
+
+mamecog（まめコグ）とKerasの出力が同等であることを確認するためのツールとして、
+mamecog_equality_check（[https://github.com/84moto/mamecog_equality_check](https://github.com/84moto/mamecog_equality_check)）を用意しました。
 
 ## 開発状況と今後の予定
 
