@@ -2,6 +2,9 @@
 
 まめコグ － C#用の小さなCNNエンジン
 
+最新バージョンは（[https://github.com/84moto/mamecog_parallel](https://github.com/84moto/mamecog_parallel)）に移行しました。
+新しいmamecog_parallelでは、コンボリューション計算のループ処理を作り直し、Parallel.Forによるマルチコア処理を導入し高速化を実現しました。
+
 ## 概要
 
 まめコグ（mamecog）は、Kerasで構築したCNN（Convolutional Neural Network）の学習済みモデルを用いて、C#アプリケーションでCNNの推論を行うツールです。まめコグにはCNNの学習機能は含みません。
